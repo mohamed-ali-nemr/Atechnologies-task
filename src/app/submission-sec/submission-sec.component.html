@@ -1,0 +1,76 @@
+<div class="container text-center" style="max-width: 600px">
+  <!-- Close Button -->
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <!-- X Icon -->
+    <div
+      class="shadow-sm"
+      style="
+        background-color: #f4f4f4;
+        border-radius: 7.11px;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      "
+    >
+      <div class="icon-container">
+        <i class="fa-solid fa-x fa-2xs"></i>
+      </div>
+    </div>
+
+    <!-- العودة and Arrow Icon -->
+    <div
+      class="d-flex justify-content-end align-items-center"
+      (click)="backStepHandler()"
+    >
+      <div class="me-1">العودة</div>
+
+      <div
+        class="shadow-sm"
+        style="
+          color: #84929e;
+          background-color: #f4f4f4;
+          border-radius: 7.11px;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        "
+      >
+        <i class="fa-solid fa-arrow-right" style="color: #2e2e2e"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Heading -->
+  <div class="text-center" style="margin-bottom: 130px">
+    <h4 class="fw-bold">تم إرسال رسالتك بنجاح</h4>
+    <p style="color: #83899f">الرجاء الانتظار بعض الدقائق فقط</p>
+  </div>
+
+  <!-- Icon with Circle -->
+  <div
+    class="d-flex justify-content-center align-items-center my-4"
+    style="height: 150px"
+  >
+    <img
+      src="../../assets/7ecf9be7ee0d214d8f7d24e4546e2f24.gif"
+      alt="Paper Plane"
+      style="width: 300px; height: 300px"
+    />
+  </div>
+
+  <!-- Short Description -->
+  <div class="text-center" style="margin-top: 150px">
+    <div class="text-center">
+      <label for="shortDescription" class="form-labe" style="color: #3e97ff">
+        خروج
+      </label>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,207 @@
+<div class="container">
+  <div class="campaign-builder">
+
+    <div class="form-section">
+      <div
+        class="mb-3 shadow-sm"
+        style="
+          color: #84929e;
+          background-color: #f4f4f4;
+          border-radius: 7.11px;
+          width: 26px;
+          height: 26px;
+          margin-right: 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        "
+      >
+        <i class="fa-solid fa-x fa-2xs"></i>
+      </div>
+
+      <div class="mb-3">
+        <h3>طريقة بناء الحملة الخاصة بك</h3>
+        <p>الطريقة المختارة لطريقة إنشاء رسالة الحملة</p>
+      </div>
+
+      <div
+        class="mb-3 shadow-sm"
+        (click)="selectOption('manual')"
+        [ngStyle]="{
+          'border-color':
+            selectedOption === 'manual'
+              ? 'rgba(79, 159, 253, 1)'
+              : 'rgba(236, 236, 236, 1)'
+        }"
+        style="
+          padding: 20px;
+          border-radius: 10px;
+          cursor: pointer;
+          border: 2px solid;
+        "
+      >
+        <input
+          class="form-check-input float-start"
+          type="radio"
+          id="manual"
+          name="campaignType"
+          [(ngModel)]="selectedOption"
+          value="manual"
+        />
+        <div class="option mb-2">
+          <label for="manual">
+            <div
+              class="mb-3 shadow-sm"
+              style="
+                background-color: #f4f4f4;
+                border-radius: 7.11px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                float: right;
+              "
+            >
+              <i
+                class="fa-solid fa-file-pen"
+                style="color: rgba(62, 151, 255, 1)"
+              ></i>
+            </div>
+            <div class="option mt-5 mb-3">
+              <div>
+                <h4>إنشاء يدوي</h4>
+                <p>
+                  قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،
+                </p>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <div
+        class="mb-3 shadow-sm"
+        (click)="selectOption('ai')"
+        [ngStyle]="{
+          'border-color':
+            selectedOption === 'ai'
+              ? 'rgba(79, 159, 253, 1)'
+              : 'rgba(236, 236, 236, 1)'
+        }"
+        style="
+          padding: 20px;
+          border-radius: 10px;
+          cursor: pointer;
+          border: 2px solid;
+        "
+      >
+        <input
+          class="form-check-input float-start"
+          type="radio"
+          id="ai"
+          name="campaignType"
+          [(ngModel)]="selectedOption"
+          value="ai"
+        />
+        <div class="option mb-2">
+          <label for="ai">
+            <div
+              class="mb-3 shadow-sm"
+              style="
+                background-color: #f4f4f4;
+                border-radius: 7.11px;
+                width: 30px;
+                height: 30px;
+                display: flex;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+                float: right;
+              "
+            >
+              <i
+                class="fa-solid fa-microchip fa-lg"
+                style="color: rgba(103, 70, 246, 1)"
+              ></i>
+            </div>
+            <div class="option mt-5 mb-3">
+              <div>
+                <h4>إنشاء عبر الذكاء الاصطناعي</h4>
+                <p>
+                  قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق. اختر كلماتك بعناية،
+                </p>
+              </div>
+            </div>
+          </label>
+        </div>
+      </div>
+
+      <hr class="mb-3" />
+      <!-- This section is now hidden until selectedOption is set -->
+      <div class="project-name mb-4" *ngIf="selectedOption">
+        <h4>قم بتسمية مشروعك إختيار</h4>
+        <p style="margin-top: 0; font-size: 12px; color: #777">
+          أسم مشروعك يجب ان يكون مميز وواضح
+        </p>
+        <input type="text" placeholder="اسم مشروع مقترح" />
+      </div>
+
+      <button
+        class="start-button"
+        style="
+          width: 50%;
+          float: left;
+          padding: 10px;
+          background-color: #4a90e2;
+          color: white;
+          border: none;
+          border-radius: 5px;
+          cursor: pointer;
+        "
+        [disabled]="!selectedOption"
+        [ngStyle]="{
+          'background-color': selectedOption ? '#007bff' : '#B0BBD5',
+          cursor: selectedOption ? 'pointer' : 'not-allowed'
+        }"
+        (click)="nextStepHandler()"
+      >
+        ابدأ الآن
+      </button>
+    </div>
+
+    <div class="info-section">
+      <p class="mt-5 mb-5">
+        تهيئة الحملات الإعلانية
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="15"
+          width="15"
+          viewBox="0 0 512 512"
+          style="transform: rotate(340deg)"
+        >
+          <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+          <path
+            fill="#FFD469"
+            d="M480 32c0-12.9-7.8-24.6-19.8-29.6s-25.7-2.2-34.9 6.9L381.7 53c-48 48-113.1 75-181 75l-8.7 0-32 0-96 0c-35.3 0-64 28.7-64 64l0 96c0 35.3 28.7 64 64 64l0 128c0 17.7 14.3 32 32 32l64 0c17.7 0 32-14.3 32-32l0-128 8.7 0c67.9 0 133 27 181 75l43.6 43.6c9.2 9.2 22.9 11.9 34.9 6.9s19.8-16.6 19.8-29.6l0-147.6c18.6-8.8 32-32.5 32-60.4s-13.4-51.6-32-60.4L480 32zm-64 76.7L416 240l0 131.3C357.2 317.8 280.5 288 200.7 288l-8.7 0 0-96 8.7 0c79.8 0 156.5-29.8 215.3-83.3z"
+          />
+        </svg>
+      </p>
+
+      <h3>مرحبا بك في منصة اختيار عقارات سكنية للتمييز</h3>
+      <p>
+        قم بإضافة عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة""قم بإضافة
+        عملائك الحاليين إلي نظامك الجديد لتبدأ التجربة"
+      </p>
+      <ul>
+        <li>قم بتحميل شعارك وتفاصيل علامتك التجارية</li>
+        <li>اختر وخصص الحقول التي تحتاجها</li>
+        <li>اختر موضوعاً وصمم مظهر استمارتك</li>
+        <li>ضبط رسالة شكر وإجراءات المتابعة</li>
+      </ul>
+    </div>
+    
+  </div>
+</div>

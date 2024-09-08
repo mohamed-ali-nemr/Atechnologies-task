@@ -1,0 +1,176 @@
+<div class="container">
+  <div class="d-flex justify-content-between align-items-center">
+    <!-- X Icon -->
+    <div
+      class="shadow-sm"
+      style="
+        background-color: #f4f4f4;
+        border-radius: 7.11px;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      "
+    >
+      <div class="icon-container">
+        <i class="fa-solid fa-x fa-2xs"></i>
+      </div>
+    </div>
+
+    <!-- العودة and Arrow Icon -->
+    <div
+      class="d-flex justify-content-end align-items-center"
+      (click)="backStepHandler()"
+    >
+      <div class="me-1">العودة</div>
+
+      <div
+        class="shadow-sm"
+        style="
+          color: #84929e;
+          background-color: #f4f4f4;
+          border-radius: 7.11px;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        "
+      >
+        <i class="fa-solid fa-arrow-right" style="color: #2e2e2e"></i>
+      </div>
+    </div>
+  </div>
+
+  <div class="text-center mt-5">
+    <h3 class="mb-4 fw-bold">اختر المكان المفضل لسكنك</h3>
+    <p class="text-muted mb-5">
+      قم باختيار مصدر شققك السكنية لكي تستكمل باقي الخطوات
+    </p>
+  </div>
+
+  <div class="row justify-content-center mb-5">
+    <!-- Option 1 -->
+    <div class="col-6 col-md-3">
+      <div
+        class="card border-light shadow-sm p-4 d-flex align-items-center justify-content-between"
+        style="cursor: pointer"
+        (click)="selectOption('dahab')"
+      >
+        <!-- Radio Button -->
+        <input
+          class="form-check-input float-end"
+          type="radio"
+          style="position: absolute; top: 15px; right: 15px"
+        />
+        <div
+          class="card-body d-flex flex-column align-items-center text-center"
+        >
+          <div
+            class="d-flex justify-content-center align-items-center"
+            style="
+              background-color: #f4f4f4;
+              border-radius: 7.11px;
+              width: 100px;
+              height: 100px;
+              cursor: pointer;
+            "
+          >
+            <i class="fa-solid fa-users fa-3x" style="color: #9b7ae3"></i>
+          </div>
+          <h5 class="card-title mt-3">دهب</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 2 -->
+    <div class="col-6 col-md-3">
+      <div
+        class="card border-light shadow-sm p-4"
+        style="cursor: pointer"
+        (click)="selectOption('northCoast')"
+      >
+        <!-- Radio Button -->
+        <input
+          class="form-check-input float-end"
+          type="radio"
+          style="position: absolute; top: 15px; right: 15px"
+        />
+
+        <div
+          class="card-body d-flex flex-column align-items-center text-center"
+        >
+          <div
+            class="d-flex justify-content-center align-items-center"
+            style="
+              background-color: #f4f4f4;
+              border-radius: 7.11px;
+              width: 100px;
+              height: 100px;
+              cursor: pointer;
+            "
+          >
+            <i class="fa-solid fa-truck fa-3x" style="color: #ffa726"></i>
+          </div>
+          <h5 class="card-title mt-3">الساحل الشمالي</h5>
+        </div>
+      </div>
+    </div>
+
+    <!-- Option 3 -->
+    <div class="col-6 col-md-3">
+      <div
+        class="card border-light shadow-sm p-4"
+        style="cursor: pointer"
+        (click)="selectOption('cairo')"
+      >
+        <!-- Radio Button -->
+        <input
+          class="form-check-input float-end"
+          type="radio"
+          style="position: absolute; top: 15px; right: 15px"
+        />
+        <div
+          class="card-body d-flex flex-column align-items-center text-center"
+        >
+          <div
+            class="d-flex justify-content-center align-items-center"
+            style="
+              background-color: #f4f4f4;
+              border-radius: 7.11px;
+              width: 100px;
+              height: 100px;
+              cursor: pointer;
+            "
+          >
+            <i class="fa-solid fa-house fa-3x" style="color: #42a5f5"></i>
+          </div>
+          <h5 class="card-title mt-3">القاهرة</h5>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Start Now Button -->
+  <div class="text-center mt-5 mb-5">
+    <button
+      class="btn btn-primary btn-lg px-5 cursor: pointer;"
+      [disabled]="!selectedOption"
+      [ngStyle]="{
+        'background-color': selectedOption ? '#007bff' : '#B0BBD5',
+        cursor: selectedOption ? 'pointer' : 'not-allowed'
+      }"
+      (click)="nextStepHandler()"
+    >
+      ابدأ الآن <i class="fa-solid fa-arrow-right"></i>
+    </button>
+    <p class="text-muted mt-3">
+      نحن هنا لمساعدتك في اختيار منزلك بسهولة وعناية. <br />
+      قم بالضغط على "ابدأ" في الصفيحة وأدخل المعلومات للحملة.
+    </p>
+  </div>
+</div>

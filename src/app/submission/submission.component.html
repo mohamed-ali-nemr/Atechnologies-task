@@ -1,0 +1,103 @@
+<div class="container text-center" style="max-width: 600px">
+  <!-- Close Button -->
+  <div class="d-flex justify-content-between align-items-center mb-5">
+    <!-- X Icon -->
+    <div
+      class="shadow-sm"
+      style="
+        background-color: #f4f4f4;
+        border-radius: 7.11px;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      "
+    >
+      <div class="icon-container">
+        <i class="fa-solid fa-x fa-2xs"></i>
+      </div>
+    </div>
+
+    <!-- العودة and Arrow Icon -->
+    <div
+      class="d-flex justify-content-end align-items-center"
+      (click)="backStepHandler()"
+    >
+      <div class="me-1">العودة</div>
+
+      <div
+        class="shadow-sm"
+        style="
+          color: #84929e;
+          background-color: #f4f4f4;
+          border-radius: 7.11px;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        "
+      >
+        <i class="fa-solid fa-arrow-right" style="color: #2e2e2e"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Heading -->
+  <div class="text-center" style="margin-bottom: 100px;">
+    <h4 class="fw-bold">جاري إرسال رسالتك الأسكانية</h4>
+    <p style="color: #83899f">الرجاء الانتظار بعض الدقائق فقط</p>
+  </div>
+
+  <!-- Icon with Circle -->
+  <div
+    class="d-flex justify-content-center align-items-center my-4"
+    style="height: 150px"
+  >
+    <div
+      class="rounded-circle border border-5 border-primary-subtle d-flex justify-content-center align-items-center"
+      style="width: 200px; height: 200px"
+    >
+      <img
+        src="../../assets/0c9abd2b33848aff4f0300d95ff98858.gif"
+        alt="Paper Plane"
+        style="width: 350px; height: 350px"
+      />
+    </div>
+  </div>
+
+  <!-- Progress Bar -->
+  <div class="d-flex justify-content-between " style="margin-top : 80px; ;">
+    <span class="text-muted">10/100</span>
+    <div class="d-flex align-items-center">
+      <span style="color: #000000;">جاري الأرسال</span>
+    </div>
+  </div>
+  <div class="progress mt-2" style="height: 12px; direction: rtl;">
+    <div
+      class="progress-bar bg-primary"
+      role="progressbar"
+      style="width: 10%; float: right;"
+      aria-valuemax="100"
+      aria-valuemin="0"
+      aria-valuenow="10"
+    ></div>
+  </div>
+  <!-- Submit Button -->
+  <div class="d-flex justify-content-center mt-5">
+    <div>
+      <button
+        type="submit"
+        class="btn btn-primary"
+        style="width: 200px"
+        (click)="nextStepHandler()"
+      >
+        الخطوة التالية
+      </button>
+    </div>
+  </div>
+</div>

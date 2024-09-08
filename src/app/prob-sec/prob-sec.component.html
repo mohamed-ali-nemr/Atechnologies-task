@@ -1,0 +1,219 @@
+<div class="container">
+  <div class="">
+    <div class="d-flex justify-content-between align-items-center mb-2">
+      <!-- X Icon -->
+      <div
+        class="shadow-sm"
+        style="
+          background-color: #f4f4f4;
+          border-radius: 7.11px;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+        "
+      >
+        <div class="icon-container">
+          <i class="fa-solid fa-x fa-2xs"></i>
+        </div>
+      </div>
+
+      <!-- العودة and Arrow Icon -->
+      <div
+        class="d-flex justify-content-end align-items-center"
+        (click)="backStepHandler()"
+      >
+        <div class="me-1">العودة</div>
+
+        <div
+          class="shadow-sm"
+          style="
+            color: #84929e;
+            background-color: #f4f4f4;
+            border-radius: 7.11px;
+            width: 26px;
+            height: 26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+          "
+        >
+          <i class="fa-solid fa-arrow-right" style="color: #2e2e2e"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="card-body">
+      <form>
+        <div class="mt-2 mb-2">
+          <div class="row mb-0">
+            <div
+              class="col-md-4 d-flex justify-content-center align-items-center"
+            >
+              <img
+                src="../../assets/envelope.png"
+                class="img-fluid rounded mb-0"
+                style="max-width: 100%; width: 200px; height: 140px"
+                alt="Description Image"
+              />
+            </div>
+
+            <div class="col-md-8 d-flex justify-content-end align-items-center">
+              <div class="row">
+                <div class="col-12">
+                  <h4 class="card-title text-end mb-1 fw-bold">
+                    قم بكتابة نص الرسالة المرسلة
+                  </h4>
+                  <label
+                    for="shortDescription"
+                    class="form-label text-end float-end"
+                    style="color: #6b7280"
+                  >
+                    قم بتسمية حملتك و تاريخ إرسال الحملة المتوقع
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="d-flex justify-content-end shadow-sm mb-2"
+            style="
+              background-color: #fcfcfc;
+              border-radius: 10px;
+              padding: 10px;
+            "
+          >
+            <div
+              class="p-2"
+              style="background-color: #fcfcfc; border-radius: 10px"
+            >
+              <div class="text-end mb-1">
+                <label
+                  for="shortDescription"
+                  class="form-label"
+                  style="color: #615e83"
+                >
+                  تصميم المنزل
+                  <i
+                    class="fa-regular fa-calendar-check"
+                    style="color: #615e83"
+                  ></i>
+                </label>
+              </div>
+
+              <div class="text-end">
+                <label
+                  for="smartModernDesign"
+                  class="form-label"
+                  style="color: #1c1c28"
+                >
+                  تصميم حديث وذكي
+                  <input class="form-check-input" type="radio" />
+                </label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label
+                  for="modernDesign"
+                  class="form-label"
+                  style="color: #1c1c28"
+                >
+                  تصميم حديث
+                  <input class="form-check-input" type="radio" />
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Toolbar with Icons -->
+          <div
+            class="d-flex justify-content-end shadow-sm"
+            style="
+              background-color: #fcfcfc;
+              border-radius: 10px;
+              padding: 10px;
+            "
+          >
+            <div
+              class="p-2"
+              style="background-color: #fcfcfc; border-radius: 10px"
+            >
+              <div class="text-end mb-1">
+                <label
+                  for="shortDescription"
+                  class="form-label"
+                  style="color: #615e83"
+                >
+                  معاينة وصف المنزل
+                  <i class="fa-regular fa-eye" style="color: #615e83"></i>
+                </label>
+              </div>
+
+              <div class="text-end">
+                <label
+                  for="modernDesign"
+                  class="form-label"
+                  style="color: #1c1c28"
+                >
+                  <span style="color: #8a8ea1">الموضوع:</span> فيلا قريبة من
+                  التجمع الخامس
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <textarea
+            class="form-control text-end shadow-sm"
+            id="detailedDescription"
+            rows="7"
+            placeholder="عزيزي [اسم العميل]،
+            نحن في [اسم الشركة] نسعى دائمًا لتقديم أفضل الحلول التي تلبي احتياجاتك وتجعل حياتك أسهل. لذلك، يسعدنا أن نعلن عن إطلاق ميزات جديدة ومثيرة في منصتنا!
+            ما الجديد؟
+            ميزة X: التي تتيح لك [وصف مختصر للميزة وفائدتها].
+            ميزة Y: لتمكينك من [وصف مختصر للميزة وفائدتها].
+            ميزة Z: التي تساعدك على [وصف مختصر للميزة وفائدتها].
+            لماذا تختار [اسم الشركة]؟
+            خدمة عملاء متميزة: نحن هنا لدعمك على مدار الساعة.
+            أسعار تنافسية: احصل على أفضل قيمة مقابل ما تدفعه.
+            أمان وثقة: نحن نحافظ على سرية معلوماتك وأمانها.
+            عرض خاص! احصل على خصم بنسبة [نسبة الخصم]% عند استخدام الكود NEWFEATURES أثناء عملية الشراء. العرض ساري حتى [تاريخ انتهاء العرض].
+            لا تفوت الفرصة! انقر هنا للاكتشاف الآن: [رابط الموقع]
+            إذا كان لديك أي استفسارات أو تحتاج إلى مساعدة، لا تتردد في الاتصال بنا على [بيانات الاتصال].
+            شكرًا لاختيارك [اسم الشركة]. نحن نتطلع إلى خدمتك وتقديم أفضل تجربة ممكنة لك.
+            مع أطيب التحيات، فريق [اسم الشركة]"
+          ></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="d-flex justify-content-center">
+          <div>
+            <button
+              type="submit"
+              class="btn btn-primary"
+              style="width: 200px"
+              (click)="nextStepHandler()"
+            >
+              الخطوة التالية
+            </button>
+          </div>
+        </div>
+
+        <!-- Short Description -->
+        <div class="mt-2">
+          <div class="text-center">
+            <label
+              for="shortDescription"
+              class="form-labe"
+              style="color: #6b7280"
+            >
+              قم بالضغط على زر "بدء" للبدء في العملية، لادخال معلومات المنزل
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
